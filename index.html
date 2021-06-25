@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevFinances</title>
+    <title>DevFinances v2</title>
     <link rel="stylesheet" href="./assets/Style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap" rel="stylesheet">
@@ -35,10 +35,34 @@
             </div>
             <div class="card total">
                 <h3>
-                    <span>Total</span>
+                    <span>Saldo Atual</span>
                     <img src="./assets/imgs/total.svg" alt="Imagem do total">
                 </h3>
                 <p id="totalDisplay">R$ 00,00</p>
+            </div>
+
+            <div class="card">
+                <h3>
+                    <span>Entradas Futuras</span>
+                    <img src="./assets/imgs/income.svg" alt="Imagem de Entradas">
+                </h3>
+                <p id="futureIncomeDisplay">R$ 00,00</p>
+            </div>
+
+            <div class="card">
+                <h3>
+                    <span>Saídas Futuras</span>
+                    <img src="./assets/imgs/expense.svg" alt="Imagem de Saídas">
+                </h3>
+                <p id="futureExpenseDisplay">R$ 00,00</p>
+            </div>
+            
+            <div class="card futureBalance">
+                <h3>
+                    <span>Saldo Futuro</span>
+                    <img src="./assets/imgs/total.svg" alt="Imagem do total">
+                </h3>
+                <p id="futureTotalDisplay">R$ 00,00</p>
             </div>
 
         </section>
@@ -55,6 +79,7 @@
                         <!--Table Header(define o cabeçalho/Título da coluna )-->
                         <th>Valor</th>
                         <th>Data</th>
+                        <th>Data Venc</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -85,7 +110,7 @@
 
                     <div class="input-group">
                         <label 
-                            class="sr-only"
+                            class="labelText"
                             for="amount">Valor</label>
                         <input 
                             type="number"
@@ -99,13 +124,25 @@
 
                     <div class="input-group">
                         <label 
-                            class="sr-only"
+                            class="labelText"
                             for="date">Data</label>
                         <input 
                             type="date" 
                             id="date"
                             name="date"
-                            placeholder="Descrição"
+                        />
+                    </div>
+
+                    <div class="input-group">
+                        <label 
+                            class="labelText"
+                            for="dueDate">Data de Vencimento</label>
+                        <input 
+                            onfocus="(this.type='date')"
+                            placeholder="test"
+                            type="date"
+                            id="dueDate"
+                            name="dueDate"
                         />
                     </div>
 
