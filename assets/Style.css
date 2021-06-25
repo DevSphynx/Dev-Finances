@@ -37,7 +37,6 @@ body {
 
 /* Title */
 h2 {
-    margin-top: 3.2rem;
     margin-bottom: 0.8rem;
     color: #363f5f;
     
@@ -130,7 +129,7 @@ header {
 
 .card h3 {
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 1.3rem;
 
     display: flex;
     align-items: center;
@@ -145,6 +144,11 @@ header {
 }
 
 .card.total {
+    background: var(--green);
+    color: white;
+}
+
+.card.futureBalance {
     background: var(--green);
     color: white;
 }
@@ -245,6 +249,10 @@ td.expense {
     margin-top: 0;
 }
 
+.labelText {
+    color: var(--dark-blue);
+}
+
 .form form input {
     border: none;
     border-radius: 0.2rem;
@@ -290,6 +298,6 @@ footer {
     #balance {
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* igual a 1fr 1fr 1fr*/
-        gap: 2rem;
+        gap: 1rem;
     }
 }
